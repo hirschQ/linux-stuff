@@ -1,0 +1,10 @@
+#change dependencies:
+
+dpkg-deb -x expandrive.deb unpack
+dpkg-deb --control expandrive.deb unpack/DEBIAN
+
+Open the file ./unpack/DEBIAN/control and replace old package like libappindicator3-1 with new package like libayatana-appindicator3-1
+
+dpkg -b unpack expandrive_custom.deb
+
+install with dpkg -i because deb is modified now (apt won't trust)
