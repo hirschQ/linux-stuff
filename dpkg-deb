@@ -1,5 +1,3 @@
-#change dependencies:
-
 dpkg-deb -x expandrive.deb unpack
 dpkg-deb --control expandrive.deb unpack/DEBIAN
 
